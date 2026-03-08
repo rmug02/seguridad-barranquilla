@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seguridad Ciudadana y Convivencia en Barranquilla</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<script>
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+counter.innerText = "0";
+
+const updateCounter = () => {
+
+const target = +counter.getAttribute("data-target");
+const c = +counter.innerText;
+
+const increment = target / 100;
+
+if(c < target){
+counter.innerText = `${Math.ceil(c + increment)}`;
+setTimeout(updateCounter,20);
+}
+else{
+counter.innerText = target;
+}
+
+};
+
+updateCounter();
+
+});
+
+
+
+</script>
+
+<button id="topBtn">↑</button>
+<script>
+
+let btn = document.getElementById("topBtn");
+
+window.onscroll = function(){
+
+if(document.documentElement.scrollTop > 200){
+btn.style.display = "block";
+}else{
+btn.style.display = "none";
+}
+
+};
+
+btn.onclick = function(){
+window.scrollTo({top:0,behavior:"smooth"});
+};
+
+</script>
+
+<body>
+
+<header>
+
+<h1>Seguridad Ciudadana y Convivencia en los Barrios de Barranquilla</h1>
+
+<nav>
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+<li><a href="contexto.html">Contexto</a></li>
+<li><a href="analisis.html">Análisis</a></li>
+<li><a href="derechos.html">Derechos</a></li>
+<li><a href="propuestas.html">Soluciones</a></li>
+<li><a href="participacion.html">Participación</a></li>
+<li><a href="conclusion.html">Conclusion</a></li>
+
+</ul>
+</nav>
+
+</header>
+<section class="hero">
+
+<div class="hero-content">
+<h2>Seguridad Ciudadana en Barranquilla</h2>
+
+<p>
+Explorando los desafíos y soluciones para mejorar la convivencia
+en los barrios de Barranquilla mediante participación ciudadana
+y trabajo comunitario.
+</p>
+
+<a href="contexto.html" class="btn-hero">Explorar el tema</a>
+</div>
+
+</section>
+
+<main>
+
+
+<section id="inicio">
+
+<h2>Seguridad y Convivencia Ciudadana</h2>
+
+<p>
+Barranquilla es una de las ciudades más importantes de Colombia y se destaca
+por su desarrollo económico, cultural y social. Sin embargo, como ocurre en
+muchas ciudades del país, algunos barrios enfrentan problemas relacionados
+con la seguridad ciudadana y la convivencia entre vecinos.
+</p>
+
+<p>
+La seguridad ciudadana es un elemento fundamental para el bienestar de la
+población. Cuando los ciudadanos se sienten seguros pueden desarrollar sus
+actividades cotidianas, estudiar, trabajar y disfrutar de los espacios
+públicos con tranquilidad.
+</p>
+
+<p>
+En este sitio web se analiza la problemática de la seguridad ciudadana en los
+barrios de Barranquilla, sus principales causas, consecuencias y algunas
+propuestas que pueden contribuir a mejorar la convivencia y la participación
+comunitaria.
+</p>
+
+<img src="assets/barranquilla.jpg" alt="Ciudad de Barranquilla">
+
+</section>
+
+<section>
+
+<h2>Programas de seguridad ciudadana</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Frentes de seguridad</h3>
+<p>Vecinos organizados que colaboran con la policía para prevenir delitos.</p>
+</div>
+
+<div class="card">
+<h3>Cámaras de vigilancia</h3>
+<p>Monitoreo en puntos estratégicos para mejorar la respuesta ante delitos.</p>
+</div>
+
+<div class="card">
+<h3>Participación comunitaria</h3>
+<p>Programas sociales y educativos que fortalecen la convivencia.</p>
+</div>
+
+</div>
+
+</section>
+
+<aside>
+
+<h3>Datos rápidos de Barranquilla.</h3>
+
+<ul>
+<li>Población aproximada: más de 1.2 millones de habitantes.</li>
+<li>Ubicación: región Caribe de Colombia.</li>
+<li>Conocida como "La Puerta de Oro de Colombia".</li>
+<li>Importante centro industrial, comercial y portuario.</li>
+<li>Famosa por el Carnaval de Barranquilla, patrimonio cultural de la humanidad.</li>
+</ul>
+
+</aside>
+
+<section>
+
+<h2>Ubicación de Barranquilla</h2>
+
+<iframe
+src="https://www.google.com/maps?q=Barranquilla+Colombia&output=embed"
+width="100%"
+height="350"
+style="border:0;"
+loading="lazy">
+</iframe>
+
+</section>
+</main>
+
+
+<footer>
+
+<p>Proyecto académico - Desarrollo Web</p>
+<p>Estudiante: Rafael Llanos</p>
+<p>Universidad - 2026</p>
+
+</footer>
+
+</body>
+</html>
